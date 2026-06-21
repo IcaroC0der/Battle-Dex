@@ -1,0 +1,67 @@
+[
+  {
+    "id": "extreme-speed",
+    "name_en": "Extreme Speed",
+    "name_pt": "Extreme Speed",
+    "short_desc_pt": "O usuário investe contra o alvo a uma velocidade ofuscante. Este movimento sempre ataca primeiro.",
+    "effect_pt": "O usuário investe contra o alvo a uma velocidade ofuscante. Este movimento sempre ataca primeiro.",
+    "power": "80",
+    "accuracy": "100",
+    "pp": "8",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "O melhor movimento de prioridade do jogo (+2). Perfeito para nocautear (Revenge Kill) oponentes rápidos e enfraquecidos, ultrapassando até mesmo outros ataques de prioridade."
+  },
+  {
+    "id": "shock-wave",
+    "name_en": "Shock Wave",
+    "name_pt": "Shock Wave",
+    "short_desc_pt": "O usuário atinge o alvo com uma rápida descarga elétrica. Este ataque nunca erra.",
+    "effect_pt": "O usuário atinge o alvo com uma rápida descarga elétrica. Este ataque nunca erra.",
+    "power": "60",
+    "accuracy": "-",
+    "pp": "20",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Útil apenas se houver inimigos abusando de Double Team ou Minimize, pois garante o acerto. Fora esse nicho, opte por Thunderbolt pelo maior dano."
+  },
+  {
+    "id": "perish-song",
+    "name_en": "Perish Song",
+    "name_pt": "Perish Song",
+    "short_desc_pt": "Qualquer Pokémon que ouvir esta canção desmaia em três turnos, a menos que seja trocado.",
+    "effect_pt": "Qualquer Pokémon que ouvir esta canção desmaia em três turnos, a menos que seja trocado de lugar na batalha.",
+    "power": "-",
+    "accuracy": "-",
+    "pp": "8",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Excelente para forçar trocas de Pokémon muito resistentes e defensivos. É fatal se combinado com habilidades como Shadow Tag (Gothitelle, Mega Gengar) que impedem o oponente de fugir."
+  },
+  {
+    "id": "tickle",
+    "name_en": "Tickle",
+    "name_pt": "Tickle",
+    "short_desc_pt": "O usuário faz cócegas no alvo até ele rir, diminuindo seus status de Attack e Defense.",
+    "effect_pt": "O usuário faz cócegas no alvo até ele rir, diminuindo seus status de Attack e Defense.",
+    "power": "-",
+    "accuracy": "100",
+    "pp": "20",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Pode enfraquecer o dano e a resistência física do alvo. Contudo, movimentos que cortam o ataque pela metade imediatamente, como Charm ou Will-O-Wisp, tendem a ser mais eficientes."
+  },
+  {
+    "id": "baby-doll-eyes",
+    "name_en": "Baby-Doll Eyes",
+    "name_pt": "Baby-Doll Eyes",
+    "short_desc_pt": "O usuário encara o alvo com olhos meigos, o que diminui o status de Attack do alvo. Este movimento sempre ataca primeiro.",
+    "effect_pt": "O usuário encara o alvo com olhos meigos, o que diminui o status de Attack do alvo. Este movimento sempre ataca primeiro.",
+    "power": "-",
+    "accuracy": "100",
+    "pp": "20",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Útil para reduzir rapidamente o poder ofensivo de um ameaça física antes que ela o ataque. É mais utilizado em batalhas de duplas para suporte rápido e prioritário."
+  }
+]

@@ -1,0 +1,100 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  teams     Team[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Team {
+  id        String       @id @default(cuid())
+  name      String
+  userId    String
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pokemons  TeamPokemon[]
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+}
+
+model TeamPokemon {
+  id        String  @id @default(cuid())
+  teamId    String
+  team      Team    @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  pokemonId String
+  pokemon   Pokemon @relation(fields: [pokemonId], references: [id])
+  move1Id   String?
+  move2Id   String?
+  move3Id   String?
+  move4Id   String?
+  
+  move1     Move?   @relation("Move1", fields: [move1Id], references: [id])
+  move2     Move?   @relation("Move2", fields: [move2Id], references: [id])
+  move3     Move?   @relation("Move3", fields: [move3Id], references: [id])
+  move4     Move?   @relation("Move4", fields: [move4Id], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+model Pokemon {
+  id             String         @id // e.g. "garchomp"
+  name_en        String
+  name_pt        String?
+  description_pt String?
+  imageUrl       String?
+  type1          String?
+  type2          String?
+  hp             Int?
+  attack         Int?
+  defense        Int?
+  spAttack       Int?
+  spDefense      Int?
+  speed          Int?
+  ability1       String?
+  ability2       String?
+  hiddenAbility  String?
+  teamPokemons   TeamPokemon[]
+  moves          PokemonMove[]
+}
+
+model Move {
+  id                String  @id // e.g. "earthquake"
+  name_en           String
+  name_pt           String?
+  short_desc_pt     String?
+  effect_pt         String?
+  power             String?
+  accuracy          String?
+  pp                String?
+  type              String?
+  category          String?
+  strategic_tips_pt String?
+
+  pokemonMoves PokemonMove[]
+  
+  teamPokemonsMove1 TeamPokemon[] @relation("Move1")
+  teamPokemonsMove2 TeamPokemon[] @relation("Move2")
+  teamPokemonsMove3 TeamPokemon[] @relation("Move3")
+  teamPokemonsMove4 TeamPokemon[] @relation("Move4")
+}
+
+model PokemonMove {
+  pokemonId String
+  moveId    String
+  pokemon   Pokemon @relation(fields: [pokemonId], references: [id], onDelete: Cascade)
+  move      Move    @relation(fields: [moveId], references: [id], onDelete: Cascade)
+
+  @@id([pokemonId, moveId])
+}

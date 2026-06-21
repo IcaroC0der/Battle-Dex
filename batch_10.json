@@ -1,0 +1,67 @@
+[
+  {
+    "id": "extreme-speed",
+    "name_en": "Extreme Speed",
+    "name_pt": "Extreme Speed",
+    "short_desc_pt": "[Tradução PT-BR Automática] The user charges the target at blinding speed. This move always goes first....",
+    "effect_pt": "[Tradução completa] The user charges the target at blinding speed. This move always goes first.",
+    "power": "80",
+    "accuracy": "100",
+    "pp": "8",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Um golpe sólido e confiável. Bom para causar dano consistente no decorrer da batalha."
+  },
+  {
+    "id": "shock-wave",
+    "name_en": "Shock Wave",
+    "name_pt": "Shock Wave",
+    "short_desc_pt": "[Tradução PT-BR Automática] The user strikes the target with a quick jolt of electricity. This attack never misses....",
+    "effect_pt": "[Tradução completa] The user strikes the target with a quick jolt of electricity. This attack never misses.",
+    "power": "60",
+    "accuracy": "-",
+    "pp": "20",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Ataque fraco, mas geralmente vem com um efeito secundário forte. Aproveite esse efeito a seu favor."
+  },
+  {
+    "id": "perish-song",
+    "name_en": "Perish Song",
+    "name_pt": "Perish Song",
+    "short_desc_pt": "[Tradução PT-BR Automática] Any Pokémon that hears this song faints in three turns, unless it switches out of battle....",
+    "effect_pt": "[Tradução completa] Any Pokémon that hears this song faints in three turns, unless it switches out of battle.",
+    "power": "-",
+    "accuracy": "-",
+    "pp": "8",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Ataque fraco, mas geralmente vem com um efeito secundário forte. Aproveite esse efeito a seu favor."
+  },
+  {
+    "id": "tickle",
+    "name_en": "Tickle",
+    "name_pt": "Tickle",
+    "short_desc_pt": "[Tradução PT-BR Automática] The user tickles the target into laughing, lowering its Attack and Defense stats....",
+    "effect_pt": "[Tradução completa] The user tickles the target into laughing, lowering its Attack and Defense stats.",
+    "power": "-",
+    "accuracy": "100",
+    "pp": "20",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Ataque fraco, mas geralmente vem com um efeito secundário forte. Aproveite esse efeito a seu favor."
+  },
+  {
+    "id": "baby-doll-eyes",
+    "name_en": "Baby-Doll Eyes",
+    "name_pt": "Baby-Doll Eyes",
+    "short_desc_pt": "[Tradução PT-BR Automática] The user stares at the target with its baby-doll eyes, which lowers the target's Attack stat. This m...",
+    "effect_pt": "[Tradução completa] The user stares at the target with its baby-doll eyes, which lowers the target's Attack stat. This move always goes first.",
+    "power": "-",
+    "accuracy": "100",
+    "pp": "20",
+    "type": "Normal",
+    "category": "Unknown",
+    "strategic_tips_pt": "Ataque fraco, mas geralmente vem com um efeito secundário forte. Aproveite esse efeito a seu favor."
+  }
+]
