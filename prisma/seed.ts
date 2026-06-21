@@ -68,8 +68,8 @@ async function main() {
           strategic_tips_pt: generateStrategicTip(move),
         },
       });
-    } catch (e) {
-      console.error(`Failed to seed move ${move.id}:`, e.message);
+    } catch (e: any) {
+      console.error(`Failed to seed move ${move.id}:`, e.message || e);
     }
   }
 
@@ -121,8 +121,8 @@ async function main() {
           });
         }
       }
-    } catch (e) {
-      console.error(`Failed to seed pokemon ${pkmn.id}:`, e.message);
+    } catch (e: any) {
+      console.error(`Failed to seed pokemon ${pkmn.id}:`, e.message || e);
     }
   }
 
