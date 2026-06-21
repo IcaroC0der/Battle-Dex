@@ -54,21 +54,10 @@ export default async function TeamBuilderPage({ searchParams }: { searchParams: 
     }
   });
 
-  // Bypass Prisma generated client cache to get type1 and type2
-  const rawTypes = await prisma.$queryRawUnsafe<Array<{ id: string, type1: string | null, type2: string | null }>>(`SELECT id, type1, type2 FROM Pokemon`);
-  const pokemonsWithTypes = pokemons.map(p => {
-    const raw = rawTypes.find(r => r.id === p.id);
-    return {
-      ...p,
-      type1: raw?.type1 || null,
-      type2: raw?.type2 || null,
-    };
-  });
-
   return (
     <div className="w-full">
       <TeamBuilderClient 
-        pokemons={pokemonsWithTypes as any} 
+        pokemons={pokemons as any} 
         userId={(session.user as any).id}
         initialTeam={initialTeam as any}
       />

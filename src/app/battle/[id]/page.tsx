@@ -34,27 +34,9 @@ export default async function BattlePage({ params }: { params: Promise<{ id: str
     redirect("/teams");
   }
 
-  // Bypass Prisma generated client cache to get type1 and type2
-  const rawTypes = await prisma.$queryRawUnsafe<Array<{ id: string, type1: string | null, type2: string | null }>>(`SELECT id, type1, type2 FROM Pokemon`);
-  
-  const teamWithTypes = {
-    ...team,
-    pokemons: team.pokemons.map((p: any) => {
-      const raw = rawTypes.find(r => r.id === p.pokemon.id);
-      return {
-        ...p,
-        pokemon: {
-          ...p.pokemon,
-          type1: raw?.type1 || null,
-          type2: raw?.type2 || null,
-        }
-      };
-    })
-  };
-
   return (
     <div className="w-full">
-      <BattleViewClient team={teamWithTypes} />
+      <BattleViewClient team={team as any} />
     </div>
   );
 }
