@@ -14,7 +14,7 @@ interface Move {
   power: string | null;
   accuracy: string | null;
   pp: string | null;
-  short_description_pt: string | null;
+  short_desc_pt: string | null;
   imageUrl: string | null;
   type1: string | null;
   type2: string | null;
@@ -218,7 +218,7 @@ export default function TeamBuilderClient({
   // Filter Moves List
   const filteredMoves = activePokemon?.moves.filter(({ move }) => {
     const matchesSearch = move.name_en.toLowerCase().includes(search.toLowerCase()) || 
-                          (move.short_description_pt && move.short_description_pt.toLowerCase().includes(search.toLowerCase()));
+                          (move.short_desc_pt && move.short_desc_pt.toLowerCase().includes(search.toLowerCase()));
     const matchesType = selectedType === "" || move.type?.toLowerCase() === selectedType.toLowerCase();
     const matchesClass = selectedClass === null || move.category === selectedClass;
     return matchesSearch && matchesType && matchesClass;
