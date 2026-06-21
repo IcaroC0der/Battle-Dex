@@ -104,7 +104,7 @@ async function main() {
       // Map Pokemon to Moves
       for (const moveId of pkmn.moves) {
         // Ensure the move exists before linking
-        const moveExists = rawMoves.find((m) => m.id === moveId);
+        const moveExists = rawMoves.find((m: any) => m.id === moveId);
         if (moveExists) {
           await prisma.pokemonMove.upsert({
             where: {
